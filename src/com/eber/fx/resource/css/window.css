@@ -1,0 +1,292 @@
+.root {
+-button-color: #289BFF;
+}
+
+.window-component {
+-fx-background-color: white;
+-fx-background-radius: 5;
+-fx-effect: null;
+-fx-opacity: 0.5;
+}
+
+.window-component:windowfocused {
+-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, .7), 10, 0, 0, 0);
+-fx-opacity: 1;
+}
+
+.window-container {
+-fx-background-image: url("../shadow.png");
+}
+
+.window-component > * > .shadow {
+-fx-background-color: rgba(0, 0, 0, .25);
+-fx-background-radius: 0 0 5 5;
+}
+
+.window-bar {
+-fx-background-color: linear-gradient(to right, #44A7FF, #0088FF);
+-fx-background-radius: 5 5 0 0;
+}
+
+.window-bar > .title {
+-fx-text-fill: white;
+-fx-font-size: 14;
+-fx-font-weight: 700;
+-fx-smoothing-type: gray;
+}
+
+.window-buttons > .button {
+-fx-background-color: transparent;
+-fx-background-insets: 0;
+-fx-background-radius: 0;
+-fx-padding: 5;
+-fx-text-fill: white;
+-fx-color: transparent;
+-fx-focus-color: transparent;
+-fx-border-color: transparent;
+-fx-border-width: 0;
+}
+
+.window-buttons > .button:hover {
+-fx-background-color: rgba(0, 0, 0, .1);
+-fx-cursor: HAND;
+}
+
+.window-buttons > .close {
+-fx-graphic: url("close.png");
+}
+
+.window-buttons > .minimize {
+-fx-graphic: url("minimize.png");
+}
+
+.window-buttons > .maximize {
+-fx-graphic: url("maximize.png");
+}
+
+.window-buttons > .close:hover {
+-fx-background-color: #FF6868;
+}
+
+.window-buttons >.close:pressed {
+-fx-background-color: #FF8686;
+}
+
+.text-field {
+-fx-background-color: #e6e6e6;
+-fx-background-radius: 12;
+-fx-padding: 2 4 2 4;
+-fx-border-width: 4;
+-fx-border-color: #e6e6e6;
+-fx-border-radius: 8;
+-fx-font-size: 13px;
+-fx-font-weight: 400;
+-fx-text-fill: #787878;
+-fx-effect: null;
+-fx-min-height: -1;
+}
+
+.text-field:focused {
+-fx-background-color: #d1d1d1;
+}
+
+.text-area {
+-fx-background-color: #e6e6e6, #e6e6e6, #e6e6e6;
+-fx-background-insets: 0, 0, 0;
+-fx-background-radius: 12;
+-fx-focus-color: transparent;
+-fx-faint-focus-color: transparent;
+-fx-padding: 2 4 2 4;
+-fx-border-color: #e6e6e6;
+-fx-border-width: 4;
+-fx-border-radius: 8;
+-fx-font-size: 13;
+-fx-font-weight: 400;
+-fx-text-fill: #787878;
+-fx-effect: null;
+-fx-min-height: -1;
+}
+
+.text-area:focused {
+-fx-focus-color: transparent;
+-fx-faint-focus-color: transparent;
+-fx-background-color: #d1d1d1, #d1d1d1, #d1d1d1;
+-fx-background-insets: 0, 0, 0;
+-fx-background-radius: 12;
+}
+
+.text-area .scroll-pane {
+-fx-background-color: transparent;
+-fx-padding: 0;
+}
+
+.text-area .scroll-pane .viewport {
+-fx-background-color: transparent;
+-fx-padding: 0;
+}
+
+.text-area .scroll-pane .content {
+-fx-background-color: transparent;
+-fx-padding: 0;
+}
+
+.text-area .content {
+-fx-focus-color: transparent;
+-fx-background-color: transparent;
+-fx-background-insets: 0, 0, 0;
+-fx-background-radius: 12;
+-fx-border-width: 0;
+-fx-effect: null;
+-fx-background-radius: 12;
+-fx-padding: 0;
+}
+
+.text-area:focused .content {
+-fx-background-color: transparent;
+-fx-background-radius: 12;
+}
+
+.button {
+-fx-background-color: -button-color;
+-fx-background-radius: 4;
+-fx-font-weight: 700;
+-fx-font-size: 12.5px;
+-fx-font-smoothing-type: gray;
+-fx-padding: 4 10 4 10;
+-fx-text-fill: white;
+-fx-border-color: transparent;
+-fx-border-width: 0;
+-fx-cursor: HAND;
+-fx-color: transparent;
+-fx-focus-color: transparent;
+}
+
+.button:hover {
+-fx-background-color: derive(-button-color, 10%);
+}
+
+.button:armed {
+-fx-background-color: derive(-button-color, -20%);
+}
+
+.button:disabled {
+-fx-background-color: #a5a5a5;
+-fx-text-fill: #fff;
+-fx-cursor: DEFAULT;
+-fx-opacity: 0.4;
+}
+
+.combo-box > .list-cell {
+-fx-text-fill: #787878;
+}
+
+.combo-box-base {
+-fx-padding: 0;
+-fx-background-color: #e6e6e6;
+-fx-background-insets: 0 0 0 0, 0, 0, 0;
+-fx-background-radius: 12;
+-fx-font-weight: 600;
+-fx-font-size: 13px;
+-fx-font-smoothing-type: gray;
+-fx-text-fill: #787878;
+-fx-effect: null;
+-fx-border-color: #e6e6e6;
+-fx-border-width: 4;
+-fx-border-radius: 8;
+}
+
+.combo-box-base:showing {
+-fx-background-radius: 12 12 0 0;
+-fx-border-radius: 8 8 0 0;
+}
+
+.combo-box-base:hover {
+-fx-background-color: #d1d1d1;
+-fx-effect: null;
+-fx-cursor: HAND;
+}
+
+.combo-box-base:focused {
+-fx-background-color: #d1d1d1;
+}
+
+.combo-box-base > .arrow-button {
+-fx-background-color: #A5A5A5;
+-fx-background-insets: 0, 0, 0;
+-fx-background-radius: 0 8 8 0;
+-fx-padding: 0 3 0 3;
+-fx-font-weight: 700;
+-fx-font-size: 20px;
+}
+
+.combo-box-base:hover > .arrow-button {
+-fx-background-color: #8A8A8A;
+-fx-background-insets: 0, 0, 0;
+-fx-background-radius: 0 8 8 0;
+}
+
+.combo-box-base:showing > .arrow-button {
+-fx-color: transparent;
+-fx-padding: 0 3 0 3;
+-fx-background-radius: 0 8 0 0;
+}
+
+.combo-box-base > .arrow-button > .arrow {
+-fx-background-insets: 1 0 -1 0, 0;
+-fx-background-color: white, white;
+-fx-padding: 0.166667em 0.333333em 0.166667em 0.333333em;
+-fx-shape: "M 0 0 h 7 l -3.5 4 z";
+}
+
+.combo-box-base .combo-box-popup > .list-view {
+-fx-background-color: #e6e6e6;
+-fx-padding: 1 1 10 1;
+}
+
+.combo-box-base .combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
+-fx-text-fill: #787878;
+-fx-background-color: transparent;
+-fx-effect: null;
+-fx-padding: 2.5;
+}
+
+.combo-box-base .combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected {
+-fx-text-fill: #787878;
+-fx-background-color: #B8B8B8;
+}
+
+.combo-box-base .combo-box-popup  > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover, .combo-box-popup  > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover {
+-fx-text-fill: #787878;
+-fx-background-color: #BFBFBF;
+-fx-background-radius: 0;
+-fx-effect: null;
+}
+
+.progress-bar {
+-fx-background-color: transparent;
+-fx-background-insets: 0, 0;
+-fx-background-radius: 0 0 0 0;
+-fx-padding: 0;
+}
+
+.progress-bar .bar {
+-fx-background-color: -button-color;
+-fx-background-insets: 0, 0, 0;
+-fx-background-radius: 10;
+-fx-padding: 6.5;
+}
+
+.progress-bar .track {
+-fx-background-color: #F0F0F0;
+-fx-background-insets: 0, 0;
+-fx-background-radius: 10;
+-fx-padding: 0;
+}
+
+.progress-bar:disabled {
+-fx-opacity: 1;
+}
+
+.progress-bar:disabled .bar {
+-fx-opacity: 0;
+}
