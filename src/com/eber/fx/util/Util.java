@@ -29,6 +29,11 @@ public final class Util {
 		return node;
 	}
 	
+	public static final <T extends Region> T maxWidth(T r) {
+		r.setMaxWidth(Double.MAX_VALUE);
+		return r;
+	}
+	
 	public static final void maxWidth(Region ... nodes) {
 		if (nodes != null && nodes.length > 0) for (Region n : nodes) n.setMaxWidth(Double.MAX_VALUE);
 	}
